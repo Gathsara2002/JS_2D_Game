@@ -58,3 +58,36 @@ main > section#loadingAnimation > p {
     font-family: "Gill Sans ", sans-serif;
 }
 
+main > section#menu {
+    width: 70px;
+    height: 200px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+main > section#menu>div {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+main > section#menu>div#sound{
+    background-image: url("../img/mute .png");
+}
+
+main > section#menu>div#play{
+    background-image: url("../img/pause.png");
+}
+
+main > section#menu>div#restart{
+    background-image: url("../img/restart.png");
+}
+
+main > section#menu>div:hover{
+    transform: scale(1.2);
+}
+
