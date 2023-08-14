@@ -7,7 +7,7 @@ main {
 }
 
 main > section#track {
-    width: 600px;
+    width: 670px;
     height: 200%;
     position: absolute;
     left: 0;
@@ -35,3 +35,26 @@ main > section#track > div#player {
     background-size: cover;
     background-position: center;
 }
+
+main > section#loadingAnimation {
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+main > section#loadingAnimation > p {
+    text-align: center;
+    font-size: 28px;
+    padding-top: 5px;
+    font-family: "Gill Sans ", sans-serif;
+}
+
