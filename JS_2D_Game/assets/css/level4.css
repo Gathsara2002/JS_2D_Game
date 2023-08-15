@@ -68,7 +68,7 @@ main > section#menu {
     right: 20px;
 }
 
-main > section#menu>div {
+main > section#menu > div {
     width: 50px;
     height: 50px;
     margin-bottom: 20px;
@@ -77,19 +77,19 @@ main > section#menu>div {
     cursor: pointer;
 }
 
-main > section#menu>div#sound{
+main > section#menu > div#sound {
     background-image: url("../img/mute .png");
 }
 
-main > section#menu>div#play{
+main > section#menu > div#play {
     background-image: url("../img/pause.png");
 }
 
-main > section#menu>div#restart{
+main > section#menu > div#restart {
     background-image: url("../img/restart.png");
 }
 
-main > section#menu>div:hover{
+main > section#menu > div:hover {
     transform: scale(1.1);
 }
 
