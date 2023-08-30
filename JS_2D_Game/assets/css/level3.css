@@ -19,10 +19,6 @@ main > section#track {
     background-image: url("../img/lane.png");
     background-size: cover;
     background-position: center;
-    animation-name: track-animation;
-    animation-duration: 5s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
 }
 
 main > section#track > div#player {
@@ -91,5 +87,84 @@ main > section#menu > div#restart {
 
 main > section#menu > div:hover {
     transform: scale(1.1);
+}
+
+main > section#track > div#enemy {
+    height: 200px;
+    width: 105px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100vh;
+    margin: auto;
+    background-image: url("../img/enemy.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveEnemyCar;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: normal;
+}
+
+@keyframes moveEnemyCar {
+    0% {
+        bottom: 110vh;
+    }
+
+    100% {
+        bottom: -30vh;
+    }
+}
+
+main > section#track > div#taxi {
+    height: 200px;
+    width: 90px;
+    position: absolute;
+    left: 40px;
+    bottom: 50vh;
+    margin: auto;
+    background-image: url("../img/taxi.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveTaxiCar;
+    animation-iteration-count: infinite;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+
+@keyframes moveTaxiCar {
+    0% {
+        bottom: 110vh;
+    }
+
+    100% {
+        bottom: -30vh;
+    }
+}
+
+main > section#track > div#police {
+    height: 200px;
+    width: 90px;
+    position: absolute;
+    right: 40px;
+    bottom: 50vh;
+    margin: auto;
+    background-image: url("../img/police.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveTaxiCar;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    animation-direction: normal;
+}
+
+@keyframes movePoliceCar {
+    0% {
+        bottom: 110vh;
+    }
+
+    100% {
+        bottom: -30vh;
+    }
 }
 
