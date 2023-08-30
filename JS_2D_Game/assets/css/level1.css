@@ -19,10 +19,6 @@ main > section#track {
     background-image: url("../img/lane.png");
     background-size: cover;
     background-position: center;
-    animation-name: track-animation;
-    animation-duration: 5s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
 }
 
 main > section#track > div#player {
