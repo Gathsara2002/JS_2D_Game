@@ -90,8 +90,8 @@ main > section#menu > div:hover {
 }
 
 main > section#track > div#enemy {
-    height: 180px;
-    width: 95px;
+    height: 200px;
+    width: 100px;
     position: absolute;
     left: 0;
     right: 0;
@@ -107,11 +107,37 @@ main > section#track > div#enemy {
 }
 
 @keyframes moveEnemyCar {
-    0%{
+    0% {
         bottom: 110vh;
     }
 
-    100%{
+    100% {
+        bottom: -30vh;
+    }
+}
+
+main > section#track > div#taxi {
+    height: 200px;
+    width: 90px;
+    position: absolute;
+    left: 40px;
+    bottom: 50vh;
+    margin: auto;
+    background-image: url("../img/taxi.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveTaxiCar;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-direction: normal;
+}
+
+@keyframes moveTaxiCar {
+    0% {
+        bottom: 110vh;
+    }
+
+    100% {
         bottom: -30vh;
     }
 }
