@@ -91,7 +91,7 @@ main > section#menu > div:hover {
 
 main > section#track > div#enemy {
     height: 200px;
-    width: 100px;
+    width: 105px;
     position: absolute;
     left: 0;
     right: 0;
@@ -128,11 +128,37 @@ main > section#track > div#taxi {
     background-position: center;
     animation-name: moveTaxiCar;
     animation-iteration-count: infinite;
-    animation-duration: 15s;
+    animation-duration: 14s;
     animation-direction: normal;
 }
 
 @keyframes moveTaxiCar {
+    0% {
+        bottom: 110vh;
+    }
+
+    100% {
+        bottom: -30vh;
+    }
+}
+
+main > section#track > div#police {
+    height: 200px;
+    width: 90px;
+    position: absolute;
+    right: 40px;
+    bottom: 50vh;
+    margin: auto;
+    background-image: url("../img/police.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveTaxiCar;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    animation-direction: normal;
+}
+
+@keyframes movePoliceCar {
     0% {
         bottom: 110vh;
     }
