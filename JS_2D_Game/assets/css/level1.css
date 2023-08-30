@@ -89,3 +89,30 @@ main > section#menu > div:hover {
     transform: scale(1.1);
 }
 
+main > section#track > div#enemy {
+    height: 180px;
+    width: 95px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100vh;
+    margin: auto;
+    background-image: url("../img/enemy.png");
+    background-size: cover;
+    background-position: center;
+    animation-name: moveEnemyCar;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: normal;
+}
+
+@keyframes moveEnemyCar {
+    0%{
+        bottom: 110vh;
+    }
+
+    100%{
+        bottom: -30vh;
+    }
+}
+
