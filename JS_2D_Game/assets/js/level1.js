@@ -2,16 +2,17 @@ $(window).keydown(function (e) {
     /*event for pressing space bar*/
     if (e.keyCode === 32) {
         $("#loadingAnimation").css('display', 'none');
+        setScore();
     }
 
     /*up arrow or w key event */
     if (e.keyCode === 38 || e.keyCode === 87) {
-       alert("w , up");
+        alert("w , up");
     }
 
     /*down arrow or s key event */
     if (e.keyCode === 40 || e.keyCode === 83) {
-       alert("s , down");
+        alert("s , down");
     }
 
     /*left arrow or a key event */
@@ -24,3 +25,15 @@ $(window).keydown(function (e) {
         alert("d , right");
     }
 });
+
+/*set score*/
+let score = 0;
+let scoreId;
+
+function setScore() {
+    clearInterval(scoreId);
+    scoreId = setInterval(function () {
+        $("#scoreCard").text(score);
+        score = score + 1;
+    }, 100);
+}
