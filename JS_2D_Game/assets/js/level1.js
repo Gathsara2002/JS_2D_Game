@@ -1,46 +1,46 @@
-let bottom=10;
-let right=0;
+let bottom = 20;
+let right = 0;
 
 $(window).keydown(function (e) {
     /*event for pressing space bar*/
     if (e.keyCode === 32) {
         $("#loadingAnimation").css('display', 'none');
+        moveRoad();
         setScore();
     }
 
     /*up arrow or w key event */
     if (e.keyCode === 38 || e.keyCode === 87) {
-        //alert("w , up");
-        bottom=bottom+10;
+        bottom = bottom + 10;
     }
 
     /*down arrow or s key event */
     if (e.keyCode === 40 || e.keyCode === 83) {
-        //alert("s , down");
-        bottom=bottom-10;
+        bottom = bottom - 10;
     }
 
     /*left arrow or a key event */
     if (e.keyCode === 37 || e.keyCode === 65) {
-        //alert("a , left");
-        right=right+20;
+        right = right + 20;
     }
 
     /*right arrow or d key event */
     if (e.keyCode === 39 || e.keyCode === 68) {
-        //alert("d , right");
-        right=right-20;
+        right = right - 20;
     }
 
     /*move player*/
-    $("#player").css('bottom',bottom+'px');
-    $("#player").css('right',right+'px');
+    $("#player").css('bottom', bottom + 'px');
+    $("#player").css('right', right + 'px');
 });
 
 
 let score = 0;
 let scoreId;
-let pauseScore=false;
+let pauseScore = false;
+let roadPositionY = 0;
+let moveRoadId = 0;
+let pause = false;
 
 /*set score*/
 function setScore() {
@@ -54,13 +54,36 @@ function setScore() {
 }
 
 /*pause game */
-$("#pause").click(function () {
-    pauseScore=true;
+function pauseGame() {
+    pauseScore = true;
     setScore();
+    pause = true;
+    moveRoad();
+}
+
+$("#pause").click(function () {
+    pauseGame();
 });
 
 /*restart game*/
-$("#restart").click(function () {
-    pauseScore=false;
+function restartGame() {
+    pauseScore = false;
     setScore();
+    pause = false;
+    moveRoad();
+}
+
+$("#restart").click(function () {
+    restartGame();
 });
+
+/*move road */
+function moveRoad() {
+    clearInterval(moveRoadId);
+    if (!pause) {
+        moveRoadId = setInterval(function () {
+            roadPositionY = roadPositionY + 20;
+            $("#track").css("background-position-y", +roadPositionY + "px");
+        }, 100);
+    }
+}
