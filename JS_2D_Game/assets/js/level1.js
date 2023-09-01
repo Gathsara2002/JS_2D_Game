@@ -48,3 +48,10 @@ $("#pause").click(function () {
     pauseScore=true;
     setScore();
 });
+
+/*restart game*/
+$("#restart").click(function () {
+    console.log("restart");
+    pauseScore=false;
+    setScore();
+});
