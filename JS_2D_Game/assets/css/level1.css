@@ -77,7 +77,7 @@ main > section#menu > div#sound {
     background-image: url("../img/mute .png");
 }
 
-main > section#menu > div#play {
+main > section#menu > div#pause {
     background-image: url("../img/pause.png");
 }
 

@@ -26,14 +26,25 @@ $(window).keydown(function (e) {
     }
 });
 
-/*set score*/
+
 let score = 0;
 let scoreId;
+let pauseScore=false;
 
+/*set score*/
 function setScore() {
     clearInterval(scoreId);
-    scoreId = setInterval(function () {
-        $("#scoreCard").text(score);
-        score = score + 1;
-    }, 100);
+    if (!pauseScore) {
+        scoreId = setInterval(function () {
+            $("#scoreCard").text(score);
+            score = score + 1;
+        }, 100);
+    }
 }
+
+/*pause game */
+$("#pause").click(function () {
+    console.log("paused");
+    pauseScore=true;
+    setScore();
+});
