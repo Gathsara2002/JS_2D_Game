@@ -100,7 +100,6 @@ main > section#track > div#enemy {
     background-image: url("../img/enemy.png");
     background-size: cover;
     background-position: center;
-    /*animation-name: moveEnemyCar;*/
     animation-iteration-count: infinite;
     animation-duration: 10s;
     animation-direction: normal;
@@ -126,7 +125,6 @@ main > section#track > div#taxi {
     background-image: url("../img/taxi.png");
     background-size: cover;
     background-position: center;
-    /*animation-name: moveTaxiCar;*/
     animation-iteration-count: infinite;
     animation-duration: 14s;
     animation-direction: normal;
@@ -152,7 +150,6 @@ main > section#track > div#police {
     background-image: url("../img/police.png");
     background-size: cover;
     background-position: center;
-    /*animation-name: moveTaxiCar;*/
     animation-iteration-count: infinite;
     animation-duration: 12s;
     animation-direction: normal;
@@ -174,7 +171,7 @@ main > section#score {
     left: 30px;
     background-color: white;
     width: 210px;
-    opacity:0.75;
+    opacity: 0.75;
     border-radius: 10px;
     border: 3px solid black;
 }
@@ -185,7 +182,7 @@ main > section#score > p {
     margin: 12px;
 }
 
-main > section#score > h1{
+main > section#score > h1 {
     font-size: 40px;
     position: absolute;
     top: -19px;
