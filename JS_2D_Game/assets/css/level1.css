@@ -27,7 +27,7 @@ main > section#track > div#player {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10px;
+    bottom: 20px;
     margin: auto;
     background-image: url("../img/player.png");
     background-size: cover;
