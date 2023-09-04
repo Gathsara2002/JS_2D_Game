@@ -100,7 +100,7 @@ main > section#track > div#enemy {
     background-size: cover;
     background-position: center;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 7s;
     animation-direction: normal;
 }
 
@@ -125,7 +125,7 @@ main > section#track > div#taxi {
     background-size: cover;
     background-position: center;
     animation-iteration-count: infinite;
-    animation-duration: 14s;
+    animation-duration: 10.5s;
     animation-direction: normal;
 }
 
@@ -150,7 +150,7 @@ main > section#track > div#police {
     background-size: cover;
     background-position: center;
     animation-iteration-count: infinite;
-    animation-duration: 12s;
+    animation-duration: 9s;
     animation-direction: normal;
 }
 

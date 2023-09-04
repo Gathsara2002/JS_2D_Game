@@ -22,19 +22,19 @@ $(window).keydown(function (e) {
         setInterval(function () {
             let num = Math.floor(Math.random() * (130 + 1));
             $("#police").css('right', num + 'px');
-        }, 12000);
+        }, 9000);
 
         /*moving taxi car randomly*/
         setInterval(function () {
             let num = Math.floor(Math.random() * (135 - 10 + 1) + 10);
             $("#taxi").css('left', num + 'px');
-        }, 14000);
+        }, 10500);
 
         /*moving enemy car randomly*/
         setInterval(function () {
             let num = Math.floor(Math.random() * (355 - 215 + 1) + 215);
             $("#enemy").css('left', num + 'px');
-        }, 10000);
+        }, 7000);
     }
 
     /*up arrow or w key event */
