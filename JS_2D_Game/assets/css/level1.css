@@ -93,8 +93,7 @@ main > section#track > div#enemy {
     height: 200px;
     width: 105px;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 280px;
     bottom: 50vh;
     margin: auto;
     background-image: url("../img/enemy.png");
