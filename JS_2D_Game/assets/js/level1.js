@@ -60,8 +60,23 @@ function pauseGame() {
     moveRoad();
 }
 
+/*to pause enemy cars when clicked paused button*/
+function pauseAnimation() {
+    $("#enemy").css('animation-play-state', 'paused');
+    $("#police").css('animation-play-state', 'paused');
+    $("#taxi").css('animation-play-state', 'paused');
+}
+
+/*to play animation after pausing*/
+function playAnimation() {
+    $("#enemy").css('animation-play-state', 'running');
+    $("#police").css('animation-play-state', 'running');
+    $("#taxi").css('animation-play-state', 'running');
+}
+
 $("#pause").click(function () {
     pauseGame();
+    pauseAnimation();
 });
 
 /*restart game*/
@@ -74,6 +89,7 @@ function restartGame() {
 
 $("#restart").click(function () {
     restartGame();
+    playAnimation();
 });
 
 /*move road */
