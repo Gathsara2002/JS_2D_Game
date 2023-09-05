@@ -98,6 +98,7 @@ function playAnimation() {
 $("#pause").click(function () {
     pauseGame();
     pauseAnimation();
+    gameOver();
 });
 
 /*restart game*/
@@ -129,5 +130,15 @@ function moveEnemyCars() {
     $("#enemy").css('animation-name', 'moveEnemyCar');
     $("#police").css('animation-name', 'movePoliceCar');
     $("#taxi").css('animation-name', 'moveTaxiCar');
+}
+
+/*this function detect car crash and game over*/
+function gameOver() {
+    let player_top = Math.abs(document.getElementById("player").getBoundingClientRect().top);
+    let player_bottom = Math.abs(document.getElementById("player").getBoundingClientRect().bottom);
+    let player_left = Math.abs(document.getElementById("player").getBoundingClientRect().left);
+    let player_right = Math.abs(document.getElementById("player").getBoundingClientRect().right);
+
+
 }
 
