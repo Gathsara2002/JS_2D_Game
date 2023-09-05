@@ -134,20 +134,29 @@ function moveEnemyCars() {
 
 /*this function detect car crash and game over*/
 function gameOver() {
+    /*player car position*/
     let player_top = Math.abs(document.getElementById("player").getBoundingClientRect().top);
     let player_bottom = Math.abs(document.getElementById("player").getBoundingClientRect().bottom);
     let player_left = Math.abs(document.getElementById("player").getBoundingClientRect().left);
     let player_right = Math.abs(document.getElementById("player").getBoundingClientRect().right);
 
+    /*taxi car position*/
     let taxi_top = Math.abs(document.getElementById("taxi").getBoundingClientRect().top);
     let taxi_bottom = Math.abs(document.getElementById("taxi").getBoundingClientRect().bottom);
     let taxi_left = Math.abs(document.getElementById("taxi").getBoundingClientRect().left);
     let taxi_right = Math.abs(document.getElementById("taxi").getBoundingClientRect().right);
 
+    /*police car position*/
     let police_top = Math.abs(document.getElementById("police").getBoundingClientRect().top);
     let police_bottom = Math.abs(document.getElementById("police").getBoundingClientRect().bottom);
     let police_left = Math.abs(document.getElementById("police").getBoundingClientRect().left);
     let police_right = Math.abs(document.getElementById("police").getBoundingClientRect().right);
+
+    /*enemy car position*/
+    let enemy_top = Math.abs(document.getElementById("enemy").getBoundingClientRect().top);
+    let enemy_bottom = Math.abs(document.getElementById("enemy").getBoundingClientRect().bottom);
+    let enemy_left = Math.abs(document.getElementById("enemy").getBoundingClientRect().left);
+    let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
 
 }
