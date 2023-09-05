@@ -144,6 +144,11 @@ function gameOver() {
     let taxi_left = Math.abs(document.getElementById("taxi").getBoundingClientRect().left);
     let taxi_right = Math.abs(document.getElementById("taxi").getBoundingClientRect().right);
 
+    let police_top = Math.abs(document.getElementById("police").getBoundingClientRect().top);
+    let police_bottom = Math.abs(document.getElementById("police").getBoundingClientRect().bottom);
+    let police_left = Math.abs(document.getElementById("police").getBoundingClientRect().left);
+    let police_right = Math.abs(document.getElementById("police").getBoundingClientRect().right);
+
 
 }
 
