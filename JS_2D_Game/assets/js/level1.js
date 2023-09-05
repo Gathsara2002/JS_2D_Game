@@ -139,6 +139,11 @@ function gameOver() {
     let player_left = Math.abs(document.getElementById("player").getBoundingClientRect().left);
     let player_right = Math.abs(document.getElementById("player").getBoundingClientRect().right);
 
+    let taxi_top = Math.abs(document.getElementById("taxi").getBoundingClientRect().top);
+    let taxi_bottom = Math.abs(document.getElementById("taxi").getBoundingClientRect().bottom);
+    let taxi_left = Math.abs(document.getElementById("taxi").getBoundingClientRect().left);
+    let taxi_right = Math.abs(document.getElementById("taxi").getBoundingClientRect().right);
+
 
 }
 
