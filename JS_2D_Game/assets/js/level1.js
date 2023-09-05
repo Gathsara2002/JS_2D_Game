@@ -98,7 +98,6 @@ function playAnimation() {
 $("#pause").click(function () {
     pauseGame();
     pauseAnimation();
-    gameOver();
 });
 
 /*restart game*/
@@ -158,6 +157,11 @@ function gameOver() {
     let enemy_left = Math.abs(document.getElementById("enemy").getBoundingClientRect().left);
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
-
+    /*check is car outside of track*/
+    if (player_right > 810 || player_right < 240) {
+        alert("Game Over");
+    }
 }
+
+let gameOverId = setInterval(gameOver, 100);
 
