@@ -158,21 +158,21 @@ function gameOver() {
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
     /*check is car outside of track*/
-    /* if (player_right > 810 || player_right < 240) {
-         alert("Game Over");
-     }*/
+    if (player_right > 810 || player_right < 240) {
+        alert("Game Over");
+    }
 
     /*detect collapse between player and police*/
-  /*  if (((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) &&
+    if (((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) &&
         ((police_top < player_top && police_bottom > player_top) || (player_bottom < police_bottom && player_bottom > police_top))) {
         console.log("Game over");
-    }*/
+    }
 
     /*detect collapse between player and enemy*/
-    /*if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
+    if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
         ((enemy_top < player_top && enemy_bottom > player_top) || (player_bottom < enemy_bottom && player_bottom > enemy_top))) {
         console.log("Game over");
-    }*/
+    }
 
     /*detect collapse between player and taxi*/
     if (((taxi_left < player_right && player_right < taxi_right) || (taxi_left < player_left && taxi_right > player_left)) &&
