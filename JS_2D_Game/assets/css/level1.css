@@ -23,7 +23,7 @@ main > section#track {
 
 main > section#track > div#player {
     height: 180px;
-    width: 100px;
+    width: 85px;
     position: absolute;
     left: 0;
     right: 0;
@@ -32,6 +32,7 @@ main > section#track > div#player {
     background-image: url("../img/player.png");
     background-size: cover;
     background-position: center;
+    border: 1px solid red;
 }
 
 main > section#loadingAnimation {
@@ -102,6 +103,7 @@ main > section#track > div#enemy {
     animation-iteration-count: infinite;
     animation-duration: 7s;
     animation-direction: normal;
+    border: 1px solid red;
 }
 
 @keyframes moveEnemyCar {
@@ -127,6 +129,7 @@ main > section#track > div#taxi {
     animation-iteration-count: infinite;
     animation-duration: 10.5s;
     animation-direction: normal;
+    border: 1px solid red;
 }
 
 @keyframes moveTaxiCar {
@@ -152,6 +155,7 @@ main > section#track > div#police {
     animation-iteration-count: infinite;
     animation-duration: 9s;
     animation-direction: normal;
+    border: 1px solid red;
 }
 
 @keyframes movePoliceCar {

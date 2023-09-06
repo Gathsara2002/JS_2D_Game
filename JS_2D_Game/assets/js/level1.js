@@ -18,23 +18,23 @@ $(window).keydown(function (e) {
         /*this is the formula for generate random value in js
         Math.floor(Math.random() * (max - min + 1) + min)*/
 
-        /*moving police car randomly*/
-        setInterval(function () {
-            let num = Math.floor(Math.random() * (130 + 1));
-            $("#police").css('right', num + 'px');
-        }, 9000);
+        /* /!*moving police car randomly*!/
+         setInterval(function () {
+             let num = Math.floor(Math.random() * (130 + 1));
+             $("#police").css('right', num + 'px');
+         }, 9000);
 
-        /*moving taxi car randomly*/
-        setInterval(function () {
-            let num = Math.floor(Math.random() * (135 - 10 + 1) + 10);
-            $("#taxi").css('left', num + 'px');
-        }, 10500);
+         /!*moving taxi car randomly*!/
+         setInterval(function () {
+             let num = Math.floor(Math.random() * (135 - 10 + 1) + 10);
+             $("#taxi").css('left', num + 'px');
+         }, 10500);
 
-        /*moving enemy car randomly*/
-        setInterval(function () {
-            let num = Math.floor(Math.random() * (355 - 215 + 1) + 215);
-            $("#enemy").css('left', num + 'px');
-        }, 7000);
+         /!*moving enemy car randomly*!/
+         setInterval(function () {
+             let num = Math.floor(Math.random() * (355 - 215 + 1) + 215);
+             $("#enemy").css('left', num + 'px');
+         }, 7000);*/
     }
 
     /*up arrow or w key event */
@@ -158,8 +158,13 @@ function gameOver() {
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
     /*check is car outside of track*/
-    if (player_right > 810 || player_right < 240) {
-        alert("Game Over");
+    /* if (player_right > 810 || player_right < 240) {
+         alert("Game Over");
+     }*/
+
+    /*detect collapse between player and police*/
+    if ((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) {
+        console.log("Game over");
     }
 }
 
