@@ -169,8 +169,14 @@ function gameOver() {
     }*/
 
     /*detect collapse between player and enemy*/
-    if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
+    /*if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
         ((enemy_top < player_top && enemy_bottom > player_top) || (player_bottom < enemy_bottom && player_bottom > enemy_top))) {
+        console.log("Game over");
+    }*/
+
+    /*detect collapse between player and taxi*/
+    if (((taxi_left < player_right && player_right < taxi_right) || (taxi_left < player_left && taxi_right > player_left)) &&
+        ((taxi_top < player_top && taxi_bottom > player_top) || (player_bottom < taxi_bottom && player_bottom > taxi_top))) {
         console.log("Game over");
     }
 }
