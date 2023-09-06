@@ -92,7 +92,7 @@ main > section#menu > div:hover {
 
 main > section#track > div#enemy {
     height: 200px;
-    width: 105px;
+    width: 80px;
     position: absolute;
     left: 280px;
     bottom: 50vh;
