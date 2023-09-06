@@ -163,7 +163,8 @@ function gameOver() {
      }*/
 
     /*detect collapse between player and police*/
-    if ((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) {
+    if (((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) &&
+        ((police_top < player_top && police_bottom > player_top) || (player_bottom < police_bottom && player_bottom > police_top))) {
         console.log("Game over");
     }
 }
