@@ -206,7 +206,7 @@ main > section#gameOver > div#lose {
     left: 0;
     right: 0;
     margin: auto;
-    visibility: hidden;
+     visibility: hidden;
 }
 
 main > section#gameOver > div#win {
@@ -220,7 +220,29 @@ main > section#gameOver > div#win {
     left: 0;
     right: 0;
     margin: auto;
-    visibility: hidden;
+   /* visibility: hidden;*/
 }
+
+main > section#gameOver > div#restartGame {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url("../img/game_resart.png");
+    background-size: cover;
+    background-position: center;
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+main > section#gameOver > div#restartGame:hover{
+    transform: scale(1.1);
+}
+
+
+
+
 
 
