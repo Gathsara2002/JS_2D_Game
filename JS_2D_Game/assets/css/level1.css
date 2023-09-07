@@ -209,4 +209,18 @@ main > section#gameOver > div#lose {
     visibility: hidden;
 }
 
+main > section#gameOver > div#win {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-image: url("../img/winIcon.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+}
+
 
