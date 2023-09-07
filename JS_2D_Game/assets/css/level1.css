@@ -188,3 +188,25 @@ main > section#score > h1 {
     right: 15px;
 }
 
+main > section#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+main > section#gameOver > div#lose {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    background-image: url("../img/gameOverIcon.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+}
+
+
