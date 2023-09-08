@@ -86,12 +86,12 @@ function pauseGame() {
 
 /*to pause enemy cars when clicked paused button*/
 function pauseAnimation() {
-    $("#enemy").css('animation-play-state', 'paused');
-    $("#police").css('animation-play-state', 'paused');
-    $("#taxi").css('animation-play-state', 'paused');
     clearInterval(policeId);
     clearInterval(taxiId);
     clearInterval(enemyId);
+    $("#enemy").css('animation-play-state', 'paused');
+    $("#police").css('animation-play-state', 'paused');
+    $("#taxi").css('animation-play-state', 'paused');
 }
 
 /*to play animation after pausing*/
