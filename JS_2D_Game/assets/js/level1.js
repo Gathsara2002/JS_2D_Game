@@ -82,6 +82,7 @@ function pauseGame() {
     setScore();
     pause = true;
     moveRoad();
+    blurBackground();
 }
 
 /*to pause enemy cars when clicked paused button*/
@@ -117,6 +118,7 @@ function restartGame() {
 $("#restart").click(function () {
     restartGame();
     playAnimation();
+    removeBlur();
 });
 
 /*move road */
@@ -188,4 +190,18 @@ function gameOver() {
 }
 
 let gameOverId = setInterval(gameOver, 100);
+
+/*this for blur background*/
+function blurBackground() {
+    $("main").addClass("bgBlur");
+    $("#track").addClass("bgBlur");
+}
+
+function blurBackground() {
+    $("#track").addClass("bgBlur");
+}
+
+function removeBlur() {
+    $("#track").removeClass("bgBlur");
+}
 
