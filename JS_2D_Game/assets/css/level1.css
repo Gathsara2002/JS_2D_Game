@@ -6,6 +6,7 @@ main {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    z-index: 2;
 }
 
 main > section#track {
@@ -192,7 +193,7 @@ main > section#gameOver {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: -1;
 }
 
 main > section#gameOver > div#lose {
