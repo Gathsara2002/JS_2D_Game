@@ -261,8 +261,8 @@ main > section#gameOver > div#nextLevel:hover {
 }
 
 .bgBlur {
-    filter: blur(8px);
-    -webkit-filter: blur(2px);
+    filter: blur(10px);
+    -webkit-filter: blur(3px);
 }
 
 

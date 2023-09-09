@@ -166,26 +166,30 @@ function gameOver() {
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
     /*check is car outside of track*/
-    if (player_right > 810 || player_right < 240) {
+    /*if (player_right > 810 || player_right < 240) {
         console.log("Game Over by hitting track off");
-    }
+        displayGameOver();
+    }*/
 
     /*detect collapse between player and police*/
     if (((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) &&
         ((police_top < player_top && police_bottom > player_top) || (player_bottom < police_bottom && player_bottom > police_top))) {
         console.log("Game over by hitting police");
+        displayGameOver();
     }
 
     /*detect collapse between player and enemy*/
     if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
         ((enemy_top < player_top && enemy_bottom > player_top) || (player_bottom < enemy_bottom && player_bottom > enemy_top))) {
         console.log("Game over by hitting enemy ");
+        displayGameOver();
     }
 
     /*detect collapse between player and taxi*/
     if (((taxi_left < player_right && player_right < taxi_right) || (taxi_left < player_left && taxi_right > player_left)) &&
         ((taxi_top < player_top && taxi_bottom > player_top) || (player_bottom < taxi_bottom && player_bottom > taxi_top))) {
         console.log("Game over by hitting taxi");
+        displayGameOver();
     }
 }
 
@@ -203,5 +207,14 @@ function blurBackground() {
 
 function removeBlur() {
     $("#track").removeClass("bgBlur");
+}
+
+/*this function will invoke when game over */
+function displayGameOver() {
+    pauseAnimation();
+    pauseGame();
+    $('#gameOver').css('z-index', 3);
+    $('#lose').css('visibility','visible');
+    $('#restartGame').css('visibility','visible');
 }
 
