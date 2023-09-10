@@ -167,13 +167,8 @@ function gameOver() {
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
     /*check is car outside of track*/
-    if (player_right > 1090) {
-        console.log("Game Over by hitting  right track off");
-        displayGameOver();
-    }
-
-    if ( player_right < 520) {
-        console.log("Game Over by hitting left track off");
+    if (player_right > 1090 || player_right < 520) {
+        console.log("Game Over by hitting   track off");
         displayGameOver();
     }
 
