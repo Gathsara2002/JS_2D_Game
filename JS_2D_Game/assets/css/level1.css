@@ -13,10 +13,12 @@ main > section#track {
     width: 670px;
     height: 200%;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 425px;
+    /*right: 0;*/
     bottom: 0;
-    margin: auto;
+   margin-bottom: auto;
+   margin-top: auto;
+    /*margin: auto;*/
     background-image: url("../img/lane.png");
     background-size: cover;
     background-position: center;
