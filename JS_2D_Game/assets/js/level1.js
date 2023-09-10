@@ -1,6 +1,6 @@
 let bottom = 20;
 let right = 0;
-let left=0;
+let left = 0;
 let score = 0;
 let scoreId;
 let pauseScore = false;
@@ -10,6 +10,7 @@ let pause = false;
 let policeId;
 let taxiId;
 let enemyId;
+let totScore;
 
 $(window).keydown(function (e) {
     /*event for pressing space bar*/
@@ -166,6 +167,14 @@ function gameOver() {
     let enemy_left = Math.abs(document.getElementById("enemy").getBoundingClientRect().left);
     let enemy_right = Math.abs(document.getElementById("enemy").getBoundingClientRect().right);
 
+    /*check player win*/
+    totScore = $("#scoreCard").text();
+    if (totScore === "500") {
+        console.log("game won");
+        gameWin();
+    }
+
+
     /*check is car outside of track*/
     if (player_right > 1090 || player_right < 520) {
         console.log("Game Over by hitting   track off");
@@ -215,7 +224,17 @@ function displayGameOver() {
     pauseAnimation();
     pauseGame();
     $('#gameOver').css('z-index', 3);
-    $('#lose').css('visibility','visible');
-    $('#restartGame').css('visibility','visible');
+    $('#lose').css('visibility', 'visible');
+    $('#restartGame').css('visibility', 'visible');
+}
+
+/*display game win*/
+function gameWin() {
+    pauseAnimation();
+    pauseGame();
+    $('#gameOver').css('z-index', 3);
+    $('#win').css('visibility', 'visible');
+    $('#restartGame').css('visibility', 'visible');
+    $('#nextLevel').css('visibility', 'visible');
 }
 

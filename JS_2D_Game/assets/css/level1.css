@@ -252,8 +252,8 @@ main > section#gameOver > div#nextLevel {
     background-image: url("../img/next.png");
     background-size: cover;
     background-position: center;
-    bottom: 160px;
-    right: 650px;
+    bottom: 70px;
+    right: 733px;
     cursor: pointer;
     visibility: hidden;
 }
