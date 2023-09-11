@@ -16,8 +16,8 @@ main > section#track {
     left: 425px;
     /*right: 0;*/
     bottom: 0;
-   margin-bottom: auto;
-   margin-top: auto;
+    margin-bottom: auto;
+    margin-top: auto;
     /*margin: auto;*/
     background-image: url("../img/lane.png");
     background-size: cover;
@@ -266,6 +266,9 @@ main > section#gameOver > div#nextLevel:hover {
     filter: blur(10px);
     -webkit-filter: blur(3px);
 }
+
+
+
 
 
 

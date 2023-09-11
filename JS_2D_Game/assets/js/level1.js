@@ -243,3 +243,8 @@ $("#restartGame").click(function () {
     location.reload();
 });
 
+/*redirect to next level*/
+$("#nextLevel").click(function () {
+    window.location.replace("http://localhost:63342/JS_2D_Game/pages/level2.html?_ijt=h3leckkm8s4ne4huh7bb9b6drd");
+});
+
