@@ -238,3 +238,8 @@ function gameWin() {
     $('#nextLevel').css('visibility', 'visible');
 }
 
+/*restart game*/
+$("#restartGame").click(function () {
+    location.reload();
+});
+
