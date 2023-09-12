@@ -11,7 +11,9 @@ let policeId;
 let taxiId;
 let enemyId;
 let totScore;
-let sound=new Audio("../assets/audio/theme.mp3");
+let sound = new Audio("../assets/audio/theme.mp3");
+let winTheme = new Audio("../assets/audio/game win.mp3");
+let loseTheme = new Audio("../assets/audio/game lost.mp3");
 
 $(window).keydown(function (e) {
     /*event for pressing space bar*/
@@ -21,7 +23,7 @@ $(window).keydown(function (e) {
         setScore();
         moveEnemyCars();
         sound.play();
-        sound.loop=true;
+        sound.loop = true;
 
         /*this is the formula for generate random value in js
         Math.floor(Math.random() * (max - min + 1) + min)*/
@@ -148,6 +150,7 @@ function moveEnemyCars() {
 
 /*this function detect car crash and game over*/
 function gameOver() {
+
     /*player car position*/
     let player_top = Math.abs(document.getElementById("player").getBoundingClientRect().top);
     let player_bottom = Math.abs(document.getElementById("player").getBoundingClientRect().bottom);
@@ -175,6 +178,7 @@ function gameOver() {
     /*check player win*/
     totScore = $("#scoreCard").text();
     if (totScore === "500") {
+        clearInterval(gameOverId);
         console.log("game won");
         gameWin();
     }
@@ -182,6 +186,7 @@ function gameOver() {
 
     /*check is car outside of track*/
     if (player_right > 1090 || player_right < 520) {
+        clearInterval(gameOverId);
         console.log("Game Over by hitting   track off");
         displayGameOver();
     }
@@ -189,6 +194,7 @@ function gameOver() {
     /*detect collapse between player and police*/
     if (((police_left < player_right && player_right < police_right) || (police_left < player_left && police_right > player_left)) &&
         ((police_top < player_top && police_bottom > player_top) || (player_bottom < police_bottom && player_bottom > police_top))) {
+        clearInterval(gameOverId);
         console.log("Game over by hitting police");
         displayGameOver();
     }
@@ -196,6 +202,7 @@ function gameOver() {
     /*detect collapse between player and enemy*/
     if (((enemy_left < player_right && player_right < enemy_right) || (enemy_left < player_left && enemy_right > player_left)) &&
         ((enemy_top < player_top && enemy_bottom > player_top) || (player_bottom < enemy_bottom && player_bottom > enemy_top))) {
+        clearInterval(gameOverId);
         console.log("Game over by hitting enemy ");
         displayGameOver();
     }
@@ -203,6 +210,7 @@ function gameOver() {
     /*detect collapse between player and taxi*/
     if (((taxi_left < player_right && player_right < taxi_right) || (taxi_left < player_left && taxi_right > player_left)) &&
         ((taxi_top < player_top && taxi_bottom > player_top) || (player_bottom < taxi_bottom && player_bottom > taxi_top))) {
+        clearInterval(gameOverId);
         console.log("Game over by hitting taxi");
         displayGameOver();
     }
@@ -231,6 +239,7 @@ function displayGameOver() {
     $('#gameOver').css('z-index', 3);
     $('#lose').css('visibility', 'visible');
     $('#restartGame').css('visibility', 'visible');
+    loseTheme.play();
 }
 
 /*display game win*/
@@ -241,6 +250,7 @@ function gameWin() {
     $('#win').css('visibility', 'visible');
     $('#restartGame').css('visibility', 'visible');
     $('#nextLevel').css('visibility', 'visible');
+    winTheme.play();
 }
 
 /*restart game*/
