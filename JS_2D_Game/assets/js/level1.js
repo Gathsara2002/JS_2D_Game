@@ -11,6 +11,7 @@ let policeId;
 let taxiId;
 let enemyId;
 let totScore;
+let sound=new Audio("../assets/audio/theme.mp3");
 
 $(window).keydown(function (e) {
     /*event for pressing space bar*/
@@ -19,6 +20,8 @@ $(window).keydown(function (e) {
         moveRoad();
         setScore();
         moveEnemyCars();
+        sound.play();
+        sound.loop=true;
 
         /*this is the formula for generate random value in js
         Math.floor(Math.random() * (max - min + 1) + min)*/
@@ -85,6 +88,7 @@ function pauseGame() {
     pause = true;
     moveRoad();
     blurBackground();
+    sound.pause();
 }
 
 /*to pause enemy cars when clicked paused button*/
@@ -115,6 +119,7 @@ function restartGame() {
     setScore();
     pause = false;
     moveRoad();
+    sound.play();
 }
 
 $("#restart").click(function () {
