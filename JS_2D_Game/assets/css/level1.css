@@ -76,8 +76,13 @@ main > section#menu > div {
     cursor: pointer;
 }
 
-main > section#menu > div#sound {
+main > section#menu > div#mute {
+    display: none;
     background-image: url("../img/mute .png");
+}
+
+main > section#menu > div#unmute {
+    background-image: url("../img/unmute.png");
 }
 
 main > section#menu > div#pause {

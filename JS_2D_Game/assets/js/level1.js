@@ -263,3 +263,17 @@ $("#nextLevel").click(function () {
     window.location.replace("http://localhost:63342/JS_2D_Game/pages/level2.html?_ijt=h3leckkm8s4ne4huh7bb9b6drd");
 });
 
+/*mute sound*/
+$("#mute").click(function () {
+    sound.play();
+    $("#mute").css('display','none');
+    $("#unmute").css('display','block');
+});
+
+/*unmute sound*/
+$("#unmute").click(function () {
+    sound.pause();
+    $("#mute").css('display','block');
+    $("#unmute").css('display','none');
+});
+
