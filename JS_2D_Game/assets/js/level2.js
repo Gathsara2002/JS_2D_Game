@@ -32,19 +32,19 @@ $(window).keydown(function (e) {
         policeId = setInterval(function () {
             let num = Math.floor(Math.random() * (130 + 1));
             $("#police").css('right', num + 'px');
-        }, 9000);
+        }, 8000);
 
         /*moving taxi car randomly*/
         taxiId = setInterval(function () {
             let num = Math.floor(Math.random() * (135 - 10 + 1) + 10);
             $("#taxi").css('left', num + 'px');
-        }, 10500);
+        }, 9500);
 
         /*moving enemy car randomly*/
         enemyId = setInterval(function () {
             let num = Math.floor(Math.random() * (355 - 215 + 1) + 215);
             $("#enemy").css('left', num + 'px');
-        }, 7000);
+        }, 6000);
     }
 
     /*up arrow or w key event */
@@ -258,22 +258,22 @@ $("#restartGame").click(function () {
     location.reload();
 });
 
-/*/!*redirect to next level*!/
+/*redirect to next level*/
 $("#nextLevel").click(function () {
-    window.location.replace("http://localhost:63342/JS_2D_Game/pages/level2.html?_ijt=h3leckkm8s4ne4huh7bb9b6drd");
-});*/
+    window.location.replace("http://localhost:63342/JS_2D_Game/pages/level3.html?_ijt=mcnmhq431a72s83e5tsfqtlmeh");
+});
 
 /*mute sound*/
 $("#mute").click(function () {
     sound.play();
-    $("#mute").css('display','none');
-    $("#unmute").css('display','block');
+    $("#mute").css('display', 'none');
+    $("#unmute").css('display', 'block');
 });
 
 /*unmute sound*/
 $("#unmute").click(function () {
     sound.pause();
-    $("#mute").css('display','block');
-    $("#unmute").css('display','none');
+    $("#mute").css('display', 'block');
+    $("#unmute").css('display', 'none');
 });
 
