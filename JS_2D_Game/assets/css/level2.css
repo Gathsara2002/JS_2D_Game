@@ -2,20 +2,23 @@ main {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: url("../img/autumn.jpg");
+    background-image: url("../img/land.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    z-index: 2;
 }
 
 main > section#track {
     width: 670px;
     height: 200%;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 425px;
+    /*right: 0;*/
     bottom: 0;
-    margin: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    /*margin: auto;*/
     background-image: url("../img/lane.png");
     background-size: cover;
     background-position: center;
@@ -23,11 +26,11 @@ main > section#track {
 
 main > section#track > div#player {
     height: 180px;
-    width: 100px;
+    width: 85px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 10px;
+    bottom: 20px;
     margin: auto;
     background-image: url("../img/player.png");
     background-size: cover;
@@ -73,8 +76,13 @@ main > section#menu > div {
     cursor: pointer;
 }
 
-main > section#menu > div#sound {
+main > section#menu > div#mute {
+    display: none;
     background-image: url("../img/mute .png");
+}
+
+main > section#menu > div#unmute {
+    background-image: url("../img/unmute.png");
 }
 
 main > section#menu > div#pause {
@@ -91,18 +99,16 @@ main > section#menu > div:hover {
 
 main > section#track > div#enemy {
     height: 200px;
-    width: 105px;
+    width: 80px;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100vh;
+    left: 280px;
+    bottom: 50vh;
     margin: auto;
     background-image: url("../img/enemy.png");
     background-size: cover;
     background-position: center;
-    animation-name: moveEnemyCar;
     animation-iteration-count: infinite;
-    animation-duration: 10s;
+    animation-duration: 7s;
     animation-direction: normal;
 }
 
@@ -126,9 +132,8 @@ main > section#track > div#taxi {
     background-image: url("../img/taxi.png");
     background-size: cover;
     background-position: center;
-    animation-name: moveTaxiCar;
     animation-iteration-count: infinite;
-    animation-duration: 14s;
+    animation-duration: 10.5s;
     animation-direction: normal;
 }
 
@@ -152,9 +157,8 @@ main > section#track > div#police {
     background-image: url("../img/police.png");
     background-size: cover;
     background-position: center;
-    animation-name: moveTaxiCar;
     animation-iteration-count: infinite;
-    animation-duration: 12s;
+    animation-duration: 9s;
     animation-direction: normal;
 }
 
@@ -174,7 +178,7 @@ main > section#score {
     left: 30px;
     background-color: white;
     width: 210px;
-    opacity:0.75;
+    opacity: 0.75;
     border-radius: 10px;
     border: 3px solid black;
 }
@@ -185,10 +189,95 @@ main > section#score > p {
     margin: 12px;
 }
 
-main > section#score > h1{
+main > section#score > h1 {
     font-size: 40px;
     position: absolute;
     top: -19px;
     right: 15px;
 }
+
+main > section#gameOver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+main > section#gameOver > div#lose {
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    background-image: url("../img/gameOverIcon.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+}
+
+main > section#gameOver > div#win {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-image: url("../img/winIcon.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+}
+
+main > section#gameOver > div#restartGame {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url("../img/game_resart.png");
+    background-size: cover;
+    background-position: center;
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+main > section#gameOver > div#restartGame:hover {
+    transform: scale(1.1);
+}
+
+main > section#gameOver > div#nextLevel {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url("../img/next.png");
+    background-size: cover;
+    background-position: center;
+    bottom: 70px;
+    right: 733px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+main > section#gameOver > div#nextLevel:hover {
+    transform: scale(1.1);
+}
+
+.bgBlur {
+    filter: blur(10px);
+    -webkit-filter: blur(3px);
+}
+
+
+
+
+
+
+
+
+
 
