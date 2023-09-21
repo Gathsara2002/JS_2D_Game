@@ -106,3 +106,36 @@ main > div#logo {
     top: 25px;
     margin: auto;
 }
+
+main > div#instruction {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+main > div#instruction:hover {
+    transform: scale(1.1);
+}
+
+main > div#description {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    right: 120px;
+    border: 1px solid red;
+}
+
+main > div#description > p {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background-color: #81ecec;
+}
