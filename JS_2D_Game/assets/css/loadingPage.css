@@ -113,7 +113,9 @@ main > div#instruction {
     position: absolute;
     top: 50px;
     right: 50px;
-    border: 1px solid red;
+    background-image: url("../img/question.png");
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
 }
 
