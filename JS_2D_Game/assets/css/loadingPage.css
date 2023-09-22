@@ -124,20 +124,39 @@ main > div#instruction:hover {
 }
 
 main > div#description {
-    height: 400px;
-    width: 300px;
-    position: absolute;
-    top: 50px;
-    right: 120px;
-    border: 1px solid red;
-}
-
-main > div#description > p {
-    height: 400px;
-    width: 300px;
+    width: 40%;
+    max-height: 300px;
+    text-align: center;
+    border: 1px solid #e7423c;
+    padding: 60px;
+    border-radius: 8px;
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
-    margin: 0;
-    background-color: #81ecec;
+    bottom: 0;
+    margin: auto;
+    background: beige;
+    box-shadow: 5px 5px 10px #888888;
+    z-index: 3;
+    display: none;
 }
+
+main > div#description > h2 {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    font-family: 'Cambria', sans-serif;
+}
+
+main > div#description > h4 {
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    left: 0;
+    right: 0;
+    font-family: 'Cambria', sans-serif;
+}
+
