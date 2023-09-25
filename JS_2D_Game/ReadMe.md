@@ -8,14 +8,15 @@ This is for learning JavaScript
 * Javascript
 * CSS
 
-<p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(55).png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(56).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(57).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(58).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(59).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(60).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(61).png" width="" height="" /></p><br>
 <p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(62).png" width="" height="" /></p><br>
+<p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(55).png" width="" height="" /></p><br>
+<p align="center"><img align="center" alt="" src="assets/img/screenshots/Screenshot%20(56).png" width="" height="" /></p><br>
+
 
 <div align="center">
 
